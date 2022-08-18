@@ -1,0 +1,41 @@
+.app {
+  &__container {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./assets/images/banner.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    color: #606060;
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+  &__subtitle {
+    color: #909090;
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  &:hover {
+    opacity: 0.7;
+  }
+  &_primary {
+    color: #fff;
+    background-color: #81b29a; //#5171a5;
+  }
+}
