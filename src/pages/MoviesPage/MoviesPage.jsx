@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import TextField from '@mui/material/TextField';
 
-import MovieCard from '../components/MovieCard/MovieCard';
-import { fetchMovies } from '../redux/reducers/movieSlice';
+import MovieCard from '../../components/MovieCard/MovieCard';
+import { fetchMovies } from '../../redux/reducers/movieSlice';
 
 import './MoviesPage.scss';
 
@@ -12,7 +12,6 @@ const MoviesPage = () => {
   const dispatch = useDispatch();
   const [searchedValue, setSearchedValue] = useState('');
   useEffect(() => {
-    console.log(localStorage);
     if (movies.length === 0) {
       dispatch(fetchMovies());
     }
@@ -20,7 +19,6 @@ const MoviesPage = () => {
 
   const handleChange = (e) => {
     setSearchedValue(e.target.value);
-    console.log(e.target.value);
   };
 
   const handleSubmit = () => {

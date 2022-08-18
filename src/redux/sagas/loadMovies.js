@@ -7,10 +7,8 @@ import {
 } from '../reducers/movieSlice';
 
 function* loadMoviesWorker({ payload }) {
-  console.log('payload', payload);
   try {
     const response = yield call(fetchMoviesApi, payload);
-    console.log(response);
     if (!response.data?.Error) {
       yield put({
         type: fetchMoviesSuccess.type,

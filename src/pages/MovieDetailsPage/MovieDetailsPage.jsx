@@ -7,7 +7,6 @@ import './MovieDetailsPage.scss';
 const MovieDetailsPage = () => {
   const { movies } = useSelector((state) => state.movie);
   const { id } = useParams();
-  console.log(movies, id);
   const movie = movies.find((prod) => prod.imdbID === id);
   return (
     <div className="movie-details__container">

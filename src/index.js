@@ -6,7 +6,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import App from './App';
 import MovieDetailsPage from './pages/MovieDetailsPage/MovieDetailsPage';
-import MoviesPage from './pages/MoviesPage';
+import MoviesPage from './pages/MoviesPage/MoviesPage';
 import { store, persistor } from './redux/store';
 
 import './index.scss';
